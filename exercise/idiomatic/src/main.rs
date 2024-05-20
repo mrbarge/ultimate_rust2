@@ -11,12 +11,12 @@
 fn count_to_5() -> i32 {
     let mut count = 0;
     loop {
-        if count > std::f32::consts::PI as i32 && count > 5 {
+        if count >= 5 {
             break;
         }
-        count += 1;
+        count += 1
     }
-    5
+    count
 }
 
 fn main() {
@@ -29,6 +29,6 @@ mod test {
 
     #[test]
     fn test_counting() {
-        assert_eq!(count_to_5() == 5, true);
+        assert_eq!(count_to_5(), 5);
     }
 }
